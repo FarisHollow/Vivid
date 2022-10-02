@@ -1,0 +1,32 @@
+marquee{ 
+    behavior : "alternate";
+    
+    direction : "right" ;
+    
+    width: 100%;
+    padding: 10px 50px;
+    background-color: lightblue;
+  }
+  .nav{
+    background-color: rgb(243, 221, 22);
+     }
+  .rong{
+
+    background-color: rgb(229, 232, 233);
+
+    
+
+    width: 100%;
+    border: 2px solid green;
+    padding: 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }  
+  .backrong{
+    background-color: rgb(238, 228, 94);
+  } 
+h1{
+      font : arial rgb(211, 19, 19) ; 
+  }

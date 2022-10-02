@@ -1,0 +1,50 @@
+<html>
+
+    <head>
+        <title>Admin Pin</title>
+        <link rel="stylesheet" href="../asset/pin.css">
+        
+    </head>
+    <body align ="center">
+        <script src="../controller/pinup.js"></script>
+        <h1>PIN code Sign up</h1>
+        <p id="display"></p>
+      
+        <form action="../controller/adminpinupchk.php"  method="POST" onsubmit="return validateForm ()">
+            <table align="center">
+                <tr>
+                    <td>
+                        <label>Email:</label>
+                        <input type="email" name="email">
+                        <br><br><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="pin-code">
+                        <input type="number" name="a" maxlength="1" autofocus>
+                        <input type="number" name="b" maxlength="1">
+                        <input type="number" name="c" maxlength="1">
+                        <input type="number" name="d" maxlength="1">
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="submit" value="submit">
+                        
+                        <br><br><br>
+                    </td>
+                </tr>
+
+	      
+            </table>
+            
+            </form>
+            <button><a href="adminpinin.php">Back</button>
+
+              
+      
+    </body>
+</html>

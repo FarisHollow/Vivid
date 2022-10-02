@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+ 
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="../asset/style.css" type="text/css">
+    </head>
+ 
+  
+    <body align="center">
+      <script src="../controller/signupvalidation.js"></script>
+        
+              <h1>Welcome to sign as Admin</h1><br>
+              <h2>Please Signup to this form</h2><br>
+              
+<div id="main">              
+<div id="reg"> 
+  <div class="rong">         
+<center>          
+  <form action="../controller/adminsignupchk.php"  onsubmit="return validateForm()" method="POST" >
+    
+        
+        
+    <table border="2" cellspaciing="20" cellpadding="20">
+       
+            <tr>
+                <td><b>Name:</b></td>
+                <td><input id="name" type="text" name="user_name" placeholder="Enter Your Username"/></td>
+            </tr>
+          
+     
+ 
+            <tr>
+                <td><b>Password:</b></td>
+                <td><input id = "pass" type="password" name="password" placeholder="Enter Your Password" /></td>
+              </tr>
+         
+     </tr>
+
+     <tr>
+        <td><b>Confirm Password:</b></td>
+        <td><input id ="cpass" type="password" name="cPassword"  placeholder="Write your password again"/></td>
+      </tr>
+    
+      <tr>
+          <td><b>E-mail:</b></td>
+          <td><input id="mail" type="email" name="email" placeholder="Enter Your Email" /></td>
+        </tr>
+        <tr>
+            <td><b>Phone Number:</b></td>
+            <td><input id ="phone" type="text" name="phnNum" placeholder="Enter Your Phone Number" /></td>
+        </tr>
+ <tr>
+    <tr>
+        <td><b>Date of Birth:</b></td>
+        <td><input id="dob" type="date" name="DOB" /></td>
+        
+      </tr>
+ 
+ </tr>
+
+ <td><b>Gender:</b></td>
+ <td>
+   <input id= "m" type="radio" name="gender" value="Male" /> Male
+   <input id="fe" type="radio" name="gender" value="Female" /> Female
+   <input id="o"type="radio" name="gender" value="Other" /> Other
+ </td>
+</table>
+
+ <p id="inshow"><b></b></p>
+        
+      
+        <p id="show"><b></b></p>
+         <input type="submit"  name="submit" value="Sign Up">
+         <a href="adminlogin.html"><input type="button" name="" value="Go Back" /></a>
+         <input type="reset" name="reset" value="Reset" />
+
+         </form>
+         
+         </center>
+        </div>
+</div>
+</div>
+        
+
+         
+     </body>
+     </html>
+     <!-- <script>
+    
+
+function ValidateEmail()
+{
+let pass = document.getElementById("mail").value;
+var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+if(pass.value.match(mailformat))
+{
+alert("You have entered a valid email address!");    //The pop up alert for a valid email address
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");    //The pop up alert for an invalid email address
+document.form1.text1.focus();
+return false;
+}
+}
+
+
+function Validatepass()
+{
+  let pass = document.getElementById("pass").value;
+  //check empty password field  
+  if(pass == "") {  
+     document.getElementById("message").innerHTML = "**Fill the password please!";  
+     return false;  
+  }  
+   
+ //minimum password length validation  
+  if(pass.length < 8) {  
+     document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
+     return false;  
+  }  
+  
+//maximum length of password validation  
+  if(pass.length > 15) {  
+     document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
+     return false;  
+  } else {  
+     alert("Password is correct");  
+  }  
+}  
+
+
+</script> -->

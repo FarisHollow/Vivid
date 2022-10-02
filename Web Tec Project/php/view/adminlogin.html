@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+
+		
+		<form method="post" action="loginchk.php">
+			
+
+			<input id="text" type="text" name="user_name"><br><br>
+			<input id="text" type="password" name="password"><br><br>
+
+			<input id="button" type="submit" value="Login"><br><br>
+
+			<a href="signup.php">Click to Signup</a><br><br>
+		</form>
+
+</body>
+</html> -->
+
+<html>
+<head>
+	<title>Vivid Login</title>
+	<link rel="stylesheet" href="../asset/style.css">
+
+</head>
+<body align="center">
+	<script src="../controller/loginvalidation.js"></script>
+
+
+    <h1 id="head">Vivid Authentication</h1>
+	<div class="rong">
+<table align="center" border="2" cellspacing="20" cellpadding="20">
+<tr>
+    <td>
+    <form method="post" action="../controller/adminloginchk.php" enctype="" name = "myform" onsubmit="return validateForm()">
+	
+	
+			
+			<b>Username :</b> <br />
+			<input id="lname" type="text" name="user_name" value="" placeholder="Enter username" /> <br />
+			<b>Password :</b> <br />
+			<input id="lpass" type="password" name="password" value="" placeholder="Enter Password" /> <br />
+			<input type="submit" id="click" name="submit" value="LogIn" onsubmit="ajax()" />
+			
+		
+	</form>
+
+	
+	
+	<a href="../view/adminsignup.html"> <input type="submit" name="Submit" value="Sign up"></a>
+		
+		
+
+	</td>
+	</tr>
+	
+	</table>
+	<p id="show"></p>
+</div>
+	<script>
+
+        function ajax(){
+            let username = document.getElementById('lname').value;
+			// let password = document.getElementById('lpass').value;
+            let xhttp = new XMLHttpRequest();
+                //xhttp.open('GET', 'userCheck.php?username='+username, true);
+                xhttp.open('POST', 'userCheck.php', true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send('lname='+username);
+
+                //document.getElementById('head').innerHTML = xhttp.responseText;
+                xhttp.onreadystatechange = function (){
+
+                    if(this.readyState == 4 && this.status == 200){
+                        //alert(this.responseText);
+                        document.getElementById('head').innerHTML = this.responseText;
+                    }
+                } 
+        }
+
+    </script>
+
+
+</body>
+</html>
